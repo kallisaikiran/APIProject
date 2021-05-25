@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
     <item
-        android:id="@+id/profile"
+        android:id="@+id/search"
         android:icon="@drawable/ic_baseline_local_movies_24"
         android:title="Search" />
 
 
     <item
-        android:id="@+id/hotels"
+        android:id="@+id/latest"
         android:icon="@drawable/ic_baseline_movie_24"
         android:title="Latest Movies" />
     <item
@@ -17,7 +17,7 @@
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Home" />
     <item
-        android:id="@+id/booking"
+        android:id="@+id/upcoming"
         android:icon="@drawable/ic_baseline_movie_filter_24"
         android:title="Upcoming Movies" />
     <item

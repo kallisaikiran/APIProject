@@ -59,15 +59,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         HomeFragment.homeFragment() ).commit();
                 break;
-            case R.id.hotels:
+            case R.id.latest:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         LatestMoviesFragment.latestMoviesFragment()  ).commit();
                 break;
-            case R.id.profile:
+            case R.id.search:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         SearchFragment.searchFragment()).commit();
                 break;
-            case R.id.booking:
+            case R.id.upcoming:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                        UpcomingFragment.upcomingFragment()).commit();
             case R.id.logout:

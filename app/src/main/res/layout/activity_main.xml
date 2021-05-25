@@ -34,5 +34,5 @@ tools:openDrawer="start">
     android:layout_height="match_parent"
     android:layout_gravity="start"
     app:headerLayout="@layout/nav_header"
-    app:menu="@menu/bottom_navigation_items" />
+    app:menu="@menu/navigation" />
 </androidx.drawerlayout.widget.DrawerLayout>
