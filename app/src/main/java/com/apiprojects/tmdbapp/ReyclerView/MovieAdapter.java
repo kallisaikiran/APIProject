@@ -48,6 +48,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     }
 
+    public void updateData(List<MovieModel> movieModels) {
+        this.movieModels = movieModels;
+        notifyDataSetChanged();
+    }
 
     public class MovieViewHolder extends RecyclerView.ViewHolder {
 
