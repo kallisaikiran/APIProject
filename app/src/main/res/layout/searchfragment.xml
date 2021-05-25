@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+<!--    <EditText android:id="@+id/search"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="10dip"-->
+<!--        android:textSize="16dip"-->
+<!--        android:textStyle="bold"/>-->
+
+    <EditText
+        android:id="@+id/search"
+        android:hint="Search Movie Here...."
+        android:textSize="14dp"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:layout_gravity="left"
+        android:paddingLeft="20dp"
+        android:background="@drawable/edittext_rounded"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/movie_list"
+        android:background="#fff"
+
+
+        />
+</LinearLayout>
