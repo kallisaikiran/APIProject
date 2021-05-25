@@ -92,9 +92,11 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private void ValidatepEmail(final String name,final String email,final String username,final String pass) {
 User user=new User();
+
 user.setUser_email(email);
 user.setUser_name(name);
 user.setUser_username(username);
+      
         mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {

@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="Username"
+            android:hint="Email ID"
             android:textColorHint="#000000">
 
             <com.google.android.material.textfield.TextInputEditText

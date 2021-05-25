@@ -33,17 +33,16 @@ public class LoginActivity extends AppCompatActivity {
     Button btn_signin;
     TextView tvSignupHere,tv_forgot_pass;
 
-    ProgressDialog loadingBar;
     private String parentDbName = "User_Registration";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
+
         getSupportActionBar().setTitle("Sign In");
         getSupportActionBar().setHomeButtonEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        loadingBar = new ProgressDialog(LoginActivity.this);
         editTextEmail=(TextInputEditText)findViewById(R.id.editTextEmail);
         editTextPassword=(TextInputEditText)findViewById(R.id.editTextPassword);
 
@@ -79,11 +78,6 @@ public class LoginActivity extends AppCompatActivity {
         } else if (TextUtils.isEmpty(pass)) {
             Toast.makeText(this, "Please write your password...", Toast.LENGTH_SHORT).show();
         } else {
-            loadingBar.setTitle("Login Account");
-            loadingBar.setMessage("Please wait, while we are checking the credentials.");
-            loadingBar.setCanceledOnTouchOutside(false);
-            loadingBar.show();
-
             AllowAccessToAccount(username, pass);
         }
     }
