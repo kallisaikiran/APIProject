@@ -1,4 +1,4 @@
-package com.example.finalproj;
+package com.apiprojects.tmdbapp;
 
 import com.apiprojects.tmdbapp.RetrofitModel.MovieApi;
 

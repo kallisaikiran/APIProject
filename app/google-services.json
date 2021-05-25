@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "625236433561",
+    "project_id": "tmdbapp-2ff3b",
+    "storage_bucket": "tmdbapp-2ff3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625236433561:android:9549473921d48fec9a3608",
+        "android_client_info": {
+          "package_name": "com.apiprojects.tmdbapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625236433561-r3hoi3nqtppojssu2d52vkpqpt8ifbnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCONbqgsjTxuhUZwPlBclspNUwgoI63w7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625236433561-r3hoi3nqtppojssu2d52vkpqpt8ifbnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

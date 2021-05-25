@@ -1,8 +1,4 @@
-package com.example.finalproj;
-
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toast;
+package com.apiprojects.tmdbapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -10,20 +6,34 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.apiprojects.tmdbapp.Fragments.HomeFragment;
 import com.apiprojects.tmdbapp.Fragments.LatestMoviesFragment;
 import com.apiprojects.tmdbapp.Fragments.SearchFragment;
 import com.apiprojects.tmdbapp.Fragments.UpcomingFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
+
+
+
+    FirebaseAuth firebaseAuth;
 
     private DrawerLayout drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        firebaseAuth = FirebaseAuth.getInstance();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -61,7 +71,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                        UpcomingFragment.upcomingFragment()).commit();
             case R.id.logout:
-                Toast.makeText(this, "Send", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
+                firebaseAuth.signOut();
+                finish();
+                startActivity(new Intent(MainActivity.this,LoginActivity.class));
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

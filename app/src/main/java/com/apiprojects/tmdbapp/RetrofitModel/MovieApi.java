@@ -1,4 +1,4 @@
-package RetrofitModel;
+package com.apiprojects.tmdbapp.RetrofitModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -24,15 +24,15 @@ public interface MovieApi {
     @GET("/3/movie/popular")
     Call<MovieSearchResponse> getPopularMovies(@Query("api_key") String key,
                                                @Query("language") String language
-            , @Query("page") int page);
+                                                , @Query("page") int page);
 
     @GET("/3/movie/now_playing")
     Call<MovieSearchResponse> getNowPlaying(@Query("api_key") String key,
-                                            @Query("language") String language
+                                               @Query("language") String language
             , @Query("page") int page);
 
     @GET("/3/movie/upcoming")
     Call<MovieSearchResponse> getUpcomingMovies(@Query("api_key") String key,
-                                                @Query("language") String language
+                                            @Query("language") String language
             , @Query("page") int page);
 }
